@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import { useForkRef } from '@material-ui/core/utils';
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles, alpha } from '@material-ui/core/styles';
 import { onSpaceOrEnter } from '../../_helpers/utils';
 import { useCanAutoFocus } from '../../_shared/hooks/useCanAutoFocus';
 import { WrapperVariantContext } from '../../wrappers/WrapperVariantContext';
@@ -50,7 +50,7 @@ export const useStyles = makeStyles(
       borderRadius: 16,
       cursor: 'pointer',
       '&:focus, &:hover': {
-        backgroundColor: fade(theme.palette.action.active, theme.palette.action.hoverOpacity),
+        backgroundColor: alpha(theme.palette.action.active, theme.palette.action.hoverOpacity),
       },
     },
     disabled: {},

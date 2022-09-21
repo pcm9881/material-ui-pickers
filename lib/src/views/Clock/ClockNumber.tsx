@@ -2,7 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles, alpha } from '@material-ui/core/styles';
 import { onSpaceOrEnter } from '../../_helpers/utils';
 import { useCanAutoFocus } from '../../_shared/hooks/useCanAutoFocus';
 import { PickerSelectionState } from '../../_shared/hooks/usePickerState';
@@ -72,7 +72,7 @@ export const useStyles = makeStyles(
       },
       clockNumberDisabled: {
         pointerEvents: 'none',
-        color: fade(clockNumberColor, 0.2),
+        color: alpha(clockNumberColor, 0.2),
       },
     };
   },

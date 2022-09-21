@@ -1,6 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles, alpha } from '@material-ui/core/styles';
 import { DAY_MARGIN } from '../constants/dimensions';
 import { useUtils } from '../_shared/hooks/useUtils';
 import { Day, DayProps, areDayPropsEqual } from '../views/Calendar/Day';
@@ -39,7 +39,7 @@ const useStyles = makeStyles(
     rangeIntervalDayHighlight: {
       borderRadius: 0,
       color: theme.palette.primary.contrastText,
-      backgroundColor: fade(theme.palette.primary.light, 0.6),
+      backgroundColor: alpha(theme.palette.primary.light, 0.6),
       '&:first-child': startBorderStyle,
       '&:last-child': endBorderStyle,
     },
@@ -66,7 +66,7 @@ const useStyles = makeStyles(
       },
     },
     dayInsideRangeInterval: {
-      color: theme.palette.getContrastText(fade(theme.palette.primary.light, 0.6)),
+      color: theme.palette.getContrastText(alpha(theme.palette.primary.light, 0.6)),
     },
     notSelectedDate: {
       backgroundColor: 'transparent',

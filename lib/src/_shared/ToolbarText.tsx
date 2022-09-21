@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import Typography, { TypographyProps } from '@material-ui/core/Typography';
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles, alpha } from '@material-ui/core/styles';
 import { ExtendMui } from '../typings/helpers';
 
 export interface ToolbarTextProps extends ExtendMui<TypographyProps> {
@@ -19,7 +19,7 @@ export const useStyles = makeStyles(
     return {
       root: {
         transition: theme.transitions.create('color'),
-        color: fade(textColor, 0.54),
+        color: alpha(textColor, 0.54),
         '&$selected': {
           color: textColor,
         },

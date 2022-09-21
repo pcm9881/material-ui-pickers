@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import clsx from 'clsx';
 import ButtonBase, { ButtonBaseProps } from '@material-ui/core/ButtonBase';
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles, alpha } from '@material-ui/core/styles';
 import { ExtendMui } from '../../typings/helpers';
 import { onSpaceOrEnter } from '../../_helpers/utils';
 import { useUtils } from '../../_shared/hooks/useUtils';
@@ -25,10 +25,10 @@ export const useStyles = makeStyles(
       backgroundColor: theme.palette.background.paper,
       color: theme.palette.text.primary,
       '&:hover': {
-        backgroundColor: fade(theme.palette.action.active, theme.palette.action.hoverOpacity),
+        backgroundColor: alpha(theme.palette.action.active, theme.palette.action.hoverOpacity),
       },
       '&:focus': {
-        backgroundColor: fade(theme.palette.action.active, theme.palette.action.hoverOpacity),
+        backgroundColor: alpha(theme.palette.action.active, theme.palette.action.hoverOpacity),
         '&$selected': {
           willChange: 'background-color',
           backgroundColor: theme.palette.primary.dark,
